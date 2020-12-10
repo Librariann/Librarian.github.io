@@ -87,10 +87,12 @@ function returnToDos(){
   paintToDo(returnToDosText);
 }
 
+//SAVE TODO
 function saveToDos() {
   localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
 }
 
+////SAVE TODO COMPLETE
 function saveToDosComplete(){
   localStorage.setItem(TODOS_COMPLETE_LS, JSON.stringify(toDosComplete));
 }
@@ -107,7 +109,7 @@ function paintToDo(text) {
   delBtn.addEventListener("click", deleteToDo);
   completeBtn.addEventListener("click", completeToDo);
 
-  //버튼 생성
+  //TODO 버튼 생성
   li.appendChild(span);
   li.appendChild(delBtn);
   li.appendChild(completeBtn);
